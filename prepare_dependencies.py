@@ -909,7 +909,7 @@ class GMockPackageInstaller(PackageInstaller):
           f.write(text)
 
     gtest_port_h = os.path.join(
-        self._package_path, 'gtest', 'include',
+        self._package_path, 'googletest', 'include',
         'gtest', 'internal', 'gtest-port.h')
     with open(gtest_port_h, 'r') as f:
       text = f.read()
@@ -1078,19 +1078,18 @@ class Installer(object):
         # Only used for tests and samples.
         'gflags': (GFlagsPackageInstaller(
             config,
-            'http://gflags.googlecode.com/files'
-            '/gflags-2.0-no-svn-files.tar.gz')),
+            'https://github.com/schuhschuh/gflags/archive/v2.2.0.tar.gz')),
 
         # GLog is the logging mechanism used through the client API
         'glog': (GLogPackageInstaller(
             config,
-            'http://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-glog/glog-0.3.3.tar.gz')),
+            'https://github.com/google/glog/archive/v0.3.4.tar.gz')),
 
         # GMock (and included GTest) are only used for tests, not runtime
         # Only used for tests.
         'gmock': (GMockPackageInstaller(
             config,
-            'http://googlemock.googlecode.com/files/gmock-1.6.0.zip')),
+            'https://github.com/google/googletest/archive/release-1.8.0.tar.gz')),
 
         # For now we use JsonCpp for JSON support in the Client Service Layer
         # and other places where we process JSON encoded data.
