@@ -1062,7 +1062,7 @@ class Installer(object):
           # Use CMake as our build system for the libraries and some deps
           'cmake': (PackageInstaller(
               config,
-              'http://www.cmake.org/files/v3.1/cmake-3.1.1.tar.gz',
+              'http://www.cmake.org/files/v3.7/cmake-3.7.0.tar.gz',
               config_type=CONFIGURE_CONFIG)),
 
           # This is used both for curl https support and
