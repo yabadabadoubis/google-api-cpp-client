@@ -1084,7 +1084,7 @@ class Installer(object):
         # GLog is the logging mechanism used through the client API
         'glog': (GLogPackageInstaller(
             config,
-            'http://google-glog.googlecode.com/files/glog-0.3.3.tar.gz')),
+            'http://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/google-glog/glog-0.3.3.tar.gz')),
 
         # GMock (and included GTest) are only used for tests, not runtime
         # Only used for tests.
